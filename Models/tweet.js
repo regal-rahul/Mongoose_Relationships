@@ -40,13 +40,10 @@ const Tweet = mongoose.model('Tweet', tweetSchema);
 //     tweet2.save();
 // }
 
-// makeTweets();
-
 const findTweet = async () => {
     const t = await Tweet.find({}).populate('user', 'username')
     console.log(t);
 }
 
 findTweet();
-
 // makeTweets();
