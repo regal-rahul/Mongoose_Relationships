@@ -25,12 +25,12 @@ const User = mongoose.model('User', userSchema);
 const Tweet = mongoose.model('Tweet', tweetSchema);
 
 
-const makeTweets = async () => {
-    const user = new User({ username: 'chickenfan99', age: 61 });
-    const tweet1 = new Tweet({ text: 'I love my chickens.', likes: 1234 });
-    tweet1.user = user;
-    tweet1.save();
-}
+// const makeTweets = async () => {
+//     const user = new User({ username: 'chickenfan99', age: 61 });
+//     const tweet1 = new Tweet({ text: 'I love my chickens.', likes: 1234 });
+//     tweet1.user = user;
+//     tweet1.save();
+// }
 
 
 // const makeTweets = async () => {
@@ -42,11 +42,11 @@ const makeTweets = async () => {
 
 // makeTweets();
 
-// const findTweet = async () => {
-//     const t = await Tweet.find({}).populate('user', 'username')
-//     console.log(t);
-// }
+const findTweet = async () => {
+    const t = await Tweet.find({}).populate('user', 'username')
+    console.log(t);
+}
 
-// findTweet();
+findTweet();
 
-makeTweets();
+// makeTweets();
