@@ -47,6 +47,6 @@ const findTweet = async () => {
     console.log(t);
 }
 
-// findTweet();
+findTweet();
 
 // makeTweets();
